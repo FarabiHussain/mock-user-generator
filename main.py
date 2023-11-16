@@ -10,12 +10,14 @@ if "-print" in sys.argv:
 	print("password\t" + mock_data['password'])
 	print("job     \t" + mock_data['job'])
 	print("name    \t" + mock_data['name'])
+	print("birth   \t" + mock_data['date_of_birth'])
 	print("passport\t" + mock_data['passport_num'])
 	print("expiry  \t" + mock_data['passport_exp'])
 	print("\n")
 
 if "-clean" in sys.argv:
 	paths = pathlib.Path(os.getcwd()).glob('*.json')
+
 	for path in paths:
 		path.unlink()
 
